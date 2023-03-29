@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <th>STT</th>
+            <th>Name</th>
+            <th>Dia chi</th>
+            <th>Vi tri</th>
+            <th>So dien thoai</th>
+            <th>username</th>
+            <th>Password</th>
+            <th>Action 1</th>
+            <th>Action 2</th>
+
+        </tr>
+        <% if(memberEjs.length > 0){ %>
+            <% for(var i=0; i<memberEjs.length; i++){ %>
+                <tr>
+                    <td><%- memberEjs[i].memberID %>  </td>
+                    <td><%- memberEjs[i].hoTen %>  </td>
+                    <td><%- memberEjs[i].diaChi %>  </td>
+                    <td><%- memberEjs[i].viTri %>  </td>
+                    <td><%- memberEjs[i].soDienThoai %>  </td>
+                    <td><%- memberEjs[i].username %>  </td>
+                    <td><%- memberEjs[i].password %>  </td>
+                    <td><a href="/delete-member?id=<%-memberEjs[i].memberID %>">Delete</a></td>
+                    <td><a href="/update-member?id=<%-memberEjs[i].memberID %>">Update</a></td>
+                </tr>
+            <% } %>
+        <% }else{ %>
+            <h1> member not found! </h1>
+        <% } %> 
+
+    </table>
+</body>
+</html>
