@@ -27,7 +27,7 @@ const App = (props) => {
     <CacheProvider value={emotionCache}>
       <Head>
         <title>
-          Devias Kit
+          Quản lý linh kiện
         </title>
         <meta
           name="viewport"
@@ -48,7 +48,7 @@ const App = (props) => {
           </ThemeProvider>
         </AuthProvider>
       </LocalizationProvider>
-    </CacheProvider>
+    </CacheProvider>  //thư viện React Cache và được sử dụng để cung cấp Cache cho ứng dụng
   );
 };
 

@@ -192,9 +192,6 @@ const Page = () => {
                   severity="info"
                   sx={{ mt: 3 }}
                 >
-                  <div>
-                    You can use <b>demo@devias.io</b> and password <b>Password123!</b>
-                  </div>
                 </Alert>
               </form>
             )}

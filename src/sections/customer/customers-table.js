@@ -140,7 +140,8 @@ export const CustomersTable = (props) => {
     </Card>
   );
 };
-
+//rop types này được sử dụng để kiểm tra tính hợp lệ của các props được truyền vào component. 
+//Nếu các props không phù hợp với kiểu dữ liệu mong đợi, một cảnh báo sẽ được hiển thị trong console
 CustomersTable.propTypes = {
   count: PropTypes.number,
   items: PropTypes.array,

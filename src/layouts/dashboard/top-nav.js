@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import BellIcon from '@heroicons/react/24/solid/BellIcon';
 import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
 import Bars3Icon from '@heroicons/react/24/solid/Bars3Icon';
-import MagnifyingGlassIcon from '@heroicons/react/24/solid/MagnifyingGlassIcon';
 import {
   Avatar,
   Badge,
@@ -43,6 +42,7 @@ export const TopNav = (props) => {
           zIndex: (theme) => theme.zIndex.appBar
         }}
       >
+        {/* ta có hai Stack được sử dụng để xếp các button cùng alignment và spacing. Các Stack được dùng làm container chứa nhiều button. */}
         <Stack
           alignItems="center"
           direction="row"
@@ -65,13 +65,6 @@ export const TopNav = (props) => {
                 </SvgIcon>
               </IconButton>
             )}
-            <Tooltip title="Search">
-              <IconButton>
-                <SvgIcon fontSize="small">
-                  <MagnifyingGlassIcon />
-                </SvgIcon>
-              </IconButton>
-            </Tooltip>
           </Stack>
           <Stack
             alignItems="center"
@@ -119,7 +112,7 @@ export const TopNav = (props) => {
     </>
   );
 };
-
+// Kiểm tra PropTypes giúp kiểm tra đầu vào của component,trong quá trình sử dụng component TopNav, nếu onNavOpen không phải là một hàm thì sẽ có lỗi xảy ra.
 TopNav.propTypes = {
   onNavOpen: PropTypes.func
 };
